@@ -1,0 +1,59 @@
+<!-- <template name="login">
+   
+    <div class="middle-box fadeInDown" style="margin-top:50px;">
+        
+        <div class="login-block">
+          
+            <h1>Login</h1>
+            <form class="m-t form" role="form" action="{{pathFor route='Home'}}">
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email" id="email" name="email" required="">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" required="" id="password" 
+                    name="password">
+                </div>
+
+                <button class="btn btn-primary block full-width m-b">Login</button>
+                <label> <a href="login">Back to the site. </a> | <a href="RecoverPassword">Forgot your passowrd ? </a></label>
+                <a href="register"> <button class="btn btn-primary block full-width m-b">Register</button></a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</template> -->
+
+<template name="login">
+    {{#unless resetPassword}}
+    <div class="middle-box fadeInDown" style="margin-top:40px;">
+      
+        <h3>Register To ShopLocal</h3>  
+        <form class="m-t form" role="form" action="#">
+    
+             <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email" id="email" name="email" required="">
+             </div>
+
+             <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" required="" id="password" 
+                name="password">
+            </div>
+
+            <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+            <label> <a href="login">Back to the site. </a> | <a href="RecoverPassword">Forgot your password ? </a></label>
+            <a href="register"> <button class="btn btn-primary block full-width m-b">Register</button></a>
+
+        </form>
+
+   </div>
+   {{else}}
+        {{>RecoverPassword}}
+   {{/unless}}
+
+
+
+</template>

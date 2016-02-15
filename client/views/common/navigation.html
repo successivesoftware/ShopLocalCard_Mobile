@@ -1,0 +1,40 @@
+<template name="navigation">
+    <nav class="navbar-default navbar-static-side custom-sidebar" role="navigation">
+        <div class="sidebar-collapse">
+
+            <!-- Close canvas menu used only on OffCanvas page -->
+            <!-- You can remove this tag if you dont use offCanvas menu -->
+            <!-- <a class="close-canvas-menu"><i class="fa fa-times"></i></a> -->
+            <!-- End offCanvas menu toggle -->
+
+            <ul class="nav side-nav metismenu" id="side-menu" >
+                <li class="nav-header header-center">
+                    <div class="profile-element">
+                        <span>
+                            <img alt="image" class="img-circle image-resize" src="{{userImageUrl}}">
+                             </span>
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{currentUser.username}}</strong>
+                             </span> <span class="text-muted text-xs block">{{currentUser.emails.[0].address}}</span> </span>
+                        
+                    </div>
+                </li>
+                    
+                    <li class="{{isActiveRoute regex='ome'}}">
+                        <a class="item" href="{{pathFor route='Home'}}">
+                            <i class="fa fa-home"></i>
+                            <span class="nav-label">Home</span> 
+                        </a>
+                    </li>
+
+                    <li class="{{isActiveRoute regex='adminPanel'}}">
+                        <a class="item" href="{{pathFor route='adminPanel'}}">
+                            <i class="fa fa-cogs"></i>
+                            <span class="nav-label">Shop Local</span> 
+                        </a>
+                    </li>
+            </ul>
+            
+
+        </div>
+    </nav>
+</template>

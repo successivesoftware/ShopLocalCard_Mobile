@@ -1,0 +1,53 @@
+.profile-pic {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-pic:hover .edit {
+  display: block;
+}
+
+.edit {
+  padding-bottom: 7px;
+  padding-right: 7px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+.edit a {
+  color: #000;
+}
+
+.profile-pic-size {
+  display: block;
+  width:150px;
+  height:150px;
+  //width: auto;
+  //height: auto;
+}
+.popup-text > a{
+  color: currentColor
+}
+.no-pointer{
+  cursor: default;
+  pointer-events: none;
+}
+.user-view-action .infont a i{
+  line-height:0 !important;
+}
+.border{
+  border: 1px solid #e7eaec;
+}
+@media (min-device-width: 1240px) {
+.wizard-temp > .steps > ul > li {
+  width: 16% !important;
+}
+}
+
+@media (min-device-width: 360px) and (max-device-width: 1239px) {
+  .wizard-temp > .steps > ul > li {
+    width: 25% !important;
+  }
+}

@@ -1,0 +1,62 @@
+<template name="RecoverPassword">  
+
+  {{#if resetPassword}}
+ 
+    <div class="middle-box fadeInDown" style="margin-top:40px;">
+        <h3>Reset Password</h3>  
+        <form id="set-new-password" class="m-t form" role="form" action="#">
+            <div class="form-group">
+               <input type="password" id="new-password" class="form-control" placeholder="Try not to forget this one.">
+            </div>
+
+
+           <button type="submit" class="btn btn-primary block full-width m-b">Set New Password</button>
+        </form>
+   </div>
+
+
+  {{else}}
+    
+    <div class="middle-box fadeInDown" style="margin-top:40px;">
+        <h3>Forgot Password?</h3>  
+        <form class="m-t form" role="form" action="#" id="forgot-password">
+          
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" id="user-email" name="user-email" required="">
+            </div>
+
+           <button type="submit" class="btn btn-primary block full-width m-b">Get Reset Password Instructions</button>
+           <p id="form-messages"></p>
+        </form>
+   </div>
+
+  {{/if}}
+
+</template> 
+
+
+
+<template name="ChangePassword">  
+
+    <div class="middle-box fadeInDown" style="margin-top:40px;">
+        <h3>Change Password</h3>  
+
+        <form class="m-t form" role="form" action="#" id="change-password">
+          
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Current Password" id="currentpassword" name="currentpassword" required="">
+            </div>
+
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="New Password" id="newpassword" name="newpassword" required="">
+            </div>
+
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Repeat New Password" id="repeatnewpassword" name="repeatnewpassword" required="">
+            </div>
+
+           <button type="submit" class="btn btn-primary block full-width m-b">Update Password</button>
+           <p id="form-messages"></p>
+        </form>
+   </div>
+</template>  
